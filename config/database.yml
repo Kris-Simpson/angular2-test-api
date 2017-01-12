@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: postgres
+  password: password
+
+development:
+  <<: *default
+  database: angular2test_development
+
+test:
+  <<: *default
+  database: angular2test_test
+
+production:
+  <<: *default
+  database: angular2test_production
